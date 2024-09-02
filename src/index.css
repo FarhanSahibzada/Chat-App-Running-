@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 410px) {
+    input {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+}
