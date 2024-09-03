@@ -1,10 +1,10 @@
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import { useState } from 'react'
-import Sign from './component/sign'
 import Login from './component/Login'
 import Loading from './component/loading'
 import NotFound from './component/Notfound'
 import Home from './component/Home'
+import Sign from './component/Sign'
 
 
 function App() {
@@ -17,8 +17,7 @@ function App() {
      { path:"/Sign", element:<Sign/>   },
 ])
   return (
-    
-  <RouterProvider router={rout}/>
+   <RouterProvider router={rout}/>
   )
 }
 
