@@ -11,10 +11,9 @@ function Login() {
     let [loading, setloading] = useState(false);
 
     let checkUser = () => {
-
+        setloading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then(async (userCredential) => {
-                setloading(true);
                 const user = userCredential.user;
                 localStorage.setItem("useruid", user.uid)
 

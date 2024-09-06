@@ -5,7 +5,7 @@ import Loading from './component/loading'
 import NotFound from './component/Notfound'
 import Home from './component/Home'
 import Sign from './component/Sign'
-
+import Chat from './component/Chat'
 
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
     { path:"*", element:<NotFound/>},
     { path:"/", element:<Loading/>   },
     { path:"/home", element:<Home/>},
+    { path:"/Chat", element:<Chat/>},
      { path:"/Login", element:<Login/>   },
      { path:"/Sign", element:<Sign/>   },
 ])
