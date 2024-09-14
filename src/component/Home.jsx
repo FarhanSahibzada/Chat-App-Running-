@@ -64,6 +64,9 @@ function Home() {
         <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={()=>{
           navigate("/Profile")
         }}>Profile</h2>
+          <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={()=>{
+          navigate("/Location")
+        }}>My Location</h2>
         </div>
         <button className='text-white  font-bold me-4 rounded-2xl px-2' onClick={logout}>Logout</button>
       </div>

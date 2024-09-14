@@ -10,6 +10,7 @@ import Myshop from './component/Myshop'
 import Profile from './component/Profile'
 import Mycart from './component/Mycart'
 import Cartshow from './component/Cartshow'
+import Location from './component/Location'
 function App() {
   let rout = createBrowserRouter([
     { path:"*", element:<NotFound/>},
@@ -17,6 +18,7 @@ function App() {
     { path:"/home", element:<Home/>},
     { path:"/Myshop", element:<Myshop/>},
     { path:"/Profile", element:<Profile/>},
+    { path:"/Location", element:<Location/>},
     { path:"/Cartshow", element:<Cartshow/>},
     { path:"/Mycart", element:<Mycart/>},
     { path:"/Chat", element:<Chat/>},

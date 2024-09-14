@@ -126,7 +126,7 @@ function Myshop() {
             onChange={selecthandle}
             className="block w-full rounded-lg px-4 font-semibold py-2 h-full bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           >
-            <option value="" disabled>Farhan</option>
+            <option value="" disabled>All</option>
             <option value="chats" className="font-bold text-base cursor-pointer ">Chats</option>
             <option value="Profile" className="font-bold text-base cursor-pointer  hover:bg-red-400">Profile</option>
             <option value="Mycart" className='font-bold text-base cursor-pointer'>My Cart</option>
