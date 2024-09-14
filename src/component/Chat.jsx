@@ -23,7 +23,6 @@ function Chat(props) {
             let list = []
             querysnapshot.forEach((doc) => {
                 list.push(doc.data())
-
             })
             const sortlist = list.sort((a, b) => a.createAt - b.createAt)
             setchatlist(sortlist);
@@ -46,7 +45,7 @@ function Chat(props) {
         <div>
 
             <div className=' w-full  bg-red-600  shadow-lg'>
-                <h2 className='text-white py-3 px-4 font-bold text-2xl flex items-center  gap-2'><img src={dpimage} alt="" className='w-12 h-1/5 rounded-full border-2 border-green-600' />{state.name}</h2>
+                <h2 className='text-white py-3 px-4 font-bold text-2xl flex items-center  gap-2'><img src={state.profileimage} alt="" className='w-12 h-1/5 rounded-full border-2 border-green-600' />{state.name}</h2>
             </div>
 
             <div className='bg-gray-100  h-[75vh] overflow-x-hidden'>

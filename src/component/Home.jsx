@@ -38,7 +38,6 @@ function Home() {
     setloading(false)
     setuser(list);
   }
-
   useEffect((e) => {
     getusers()
   }, []);
@@ -54,11 +53,18 @@ function Home() {
         console.error("Logout error: ", error);
       })
   }
-  
+
   return (
     <div>
-      <div className=' w-full flex justify-between  bg-red-600  shadow-lg'>
+      <div className=' w-full flex justify-between items-center  bg-red-600  shadow-lg'>
         <h2 className='text-white py-3 px-4 font-bold text-2xl'>Chats</h2>
+        <div className='flex justify-center items-center gap-2'>
+        <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={()=>{
+       navigate("/Myshop")}}>MarketPlace</h2>
+        <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={()=>{
+          navigate("/Profile")
+        }}>Profile</h2>
+        </div>
         <button className='text-white  font-bold me-4 rounded-2xl px-2' onClick={logout}>Logout</button>
       </div>
 
@@ -71,7 +77,7 @@ function Home() {
 
         user.map((item, index) => (
           <div key={item.useruid} className='w-fll shadow-lg rounded-lg  py-2 px-4 mt-2 mb-2 flex justify-between items-center flex-wrap-reverse'>
-            <h1 className='font-semibold capitalize text-xl flex items-center gap-4'> <img src={dpimage} alt="" className='w-12 h-1/5 rounded-full border-2 border-black' /> {item.name}</h1>
+            <h1 className='font-semibold capitalize text-xl flex items-center gap-4'> <img src={item.profileimage || dpimage} alt="" className='w-12 h-1/5 rounded-full border-2 border-black' /> {item.name}</h1>
             <p className='text-gray-500 font-semibold'>{item.email}</p>
             <button className='bg-slate-300 py-2 px-4 text-white text-base rounded-full active:bg-slate-500' onClick={() => {
               navigate("/Chat", { state: { ...item, myuid } })

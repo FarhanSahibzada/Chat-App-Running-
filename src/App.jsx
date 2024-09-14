@@ -6,13 +6,19 @@ import NotFound from './component/Notfound'
 import Home from './component/Home'
 import Sign from './component/Sign'
 import Chat from './component/Chat'
-
+import Myshop from './component/Myshop'
+import Profile from './component/Profile'
+import Mycart from './component/Mycart'
+import Cartshow from './component/Cartshow'
 function App() {
-
   let rout = createBrowserRouter([
     { path:"*", element:<NotFound/>},
     { path:"/", element:<Loading/>   },
     { path:"/home", element:<Home/>},
+    { path:"/Myshop", element:<Myshop/>},
+    { path:"/Profile", element:<Profile/>},
+    { path:"/Cartshow", element:<Cartshow/>},
+    { path:"/Mycart", element:<Mycart/>},
     { path:"/Chat", element:<Chat/>},
      { path:"/Login", element:<Login/>   },
      { path:"/Sign", element:<Sign/>   },
