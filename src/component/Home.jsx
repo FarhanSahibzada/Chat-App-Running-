@@ -5,11 +5,15 @@ import { auth } from './firebase/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import dpimage from '../image/dp.png'
 import { signOut } from 'firebase/auth';
+import "./all.css"
+import doticon from "../image/dotsicon.svg"
 
 function Home() {
   const navigate = useNavigate();
   const [myuid, setmyuid] = useState("");
   const [loading, setloading] = useState(false);
+  const [nav, setnav] = useState(false);
+
 
   useEffect(() => {
     checkUser();
@@ -55,20 +59,37 @@ function Home() {
   }
 
   return (
-    <div>
-      <div className=' w-full flex justify-between items-center  bg-red-600  shadow-lg'>
+    <div className='w-full'>
+      <div className='im w-[100vw] z-50 flex justify-between items-center flex-wrap   bg-red-600  shadow-lg'>
         <h2 className='text-white py-3 px-4 font-bold text-2xl'>Chats</h2>
-        <div className='flex justify-center items-center gap-2'>
-        <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={()=>{
-       navigate("/Myshop")}}>MarketPlace</h2>
-        <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={()=>{
-          navigate("/Profile")
-        }}>Profile</h2>
-          <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={()=>{
-          navigate("/Location")
-        }}>My Location</h2>
+        <div className='han flex-wrap  flex md:justify-center items-center gap-2 backdrop:'>
+          <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={() => {
+            navigate("/Myshop")
+          }}>MarketPlace</h2>
+          <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={() => {
+            navigate("/Profile")
+          }}>Profile</h2>
+          <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={() => {
+            navigate("/Location")
+          }}>My Location</h2>
         </div>
-        <button className='text-white  font-bold me-4 rounded-2xl px-2' onClick={logout}>Logout</button>
+        <button className='logout text-white  font-bold me-4 rounded-2xl px-2' onClick={logout}>Logout</button>
+        <button className='dot text-white  font-bold me-4 rounded-2xl px-2 py-2 cursor-pointer'
+          onClick={() => setnav( prev => !prev)}
+        ><img src={doticon} alt=""
+          className='w-8 h-8'
+          /></button>
+        <div className={`short-nav  ${!nav ? "mt-[-250px]" : ""} bg-red-600 w-full  ease-in-out duration-500 `}>
+          <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={() => {
+            navigate("/Myshop")
+          }}>MarketPlace</h2>
+          <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={() => {
+            navigate("/Profile")
+          }}>Profile</h2>
+          <h2 className='text-white py-3 px-4 font-bold text-base cursor-pointer' onClick={() => {
+            navigate("/Location")
+          }}>My Location</h2>
+        </div>
       </div>
 
       {/* body */}
