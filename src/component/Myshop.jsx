@@ -52,7 +52,6 @@ function Myshop() {
         if (cate.length == 0) {
           setcate(uniqueCategories)
         }
-
       } else {
         console.log("error message");
       }

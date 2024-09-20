@@ -37,3 +37,19 @@
 .im{
     position:  relative !important;
 }
+
+
+@media (max-width : 600px) {
+ .cht{
+    display: block;
+    margin-top: 2px;
+ }
+ .em{
+    font-weight: 800;
+    margin-top: 4px;
+ }
+ .mes{
+    text-align: right;
+ }
+    
+}
