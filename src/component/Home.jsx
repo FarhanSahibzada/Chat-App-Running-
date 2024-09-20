@@ -6,7 +6,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import dpimage from '../image/dp.png'
 import { signOut } from 'firebase/auth';
 import "./all.css"
-import doticon from "../image/dotsicon.svg"
+import doticon from "../image/dicon.png"
 
 function Home() {
   const navigate = useNavigate();

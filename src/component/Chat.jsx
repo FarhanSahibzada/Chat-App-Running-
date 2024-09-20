@@ -6,6 +6,7 @@ import dpimage from '../image/dp.png'
 import backimage from '../image/back.png'
 import sendicon from '../image/sendicon.png'
 import moment from 'moment';
+import "./all.css"
 
 function Chat(props) {
     let navigate = useNavigate();
@@ -64,8 +65,8 @@ function Chat(props) {
                 }
             </div>
 
-            <div className='flex items-center justify-center bg-gray-100 pb-12'>
-                <input className='px-3 py-2  rounded-full w-[50%]'
+            <div className='text flex items-center overflow-hidden justify-center bg-gray-100 pb-12'>
+                <input className=' px-3 py-2  rounded-full w-[50%]'
                     type="text"
                     placeholder='Type a Message'
                     value={message}
